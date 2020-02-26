@@ -1,0 +1,37 @@
+.chat-main
+  .chat-main__group-info
+    .info-box
+      .info-box__title
+        .group-name
+          Name
+        .group-message
+          not message
+      .info-box__edit
+        = link_to "#", class: "contents__btn" do
+          Edit
+  .chat-main__message-list
+    .chat-comment
+      .chat-comment__name
+        .group-name1
+          user name1
+        .group-time
+      .chat-comment__name2
+        not message1
+    .chat-next
+      .chat-next__name
+        .next-name1
+          user name2
+        .next-time
+      .chat-next__name2
+        not message2
+  .chat-main__message-form
+    .message-area
+      .message-area1
+        Type a message
+      .message-area2
+        %label{class: "input-box__image"}
+          = fa_icon 'picture-o'
+          %input{type: "file"}
+    .message-icon
+      = link_to "#", class: "contents__btn" do
+        Send

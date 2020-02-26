@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  height: 100vh;
+}
+
+.side-bar{
+  background-color: #253141;
+  height: 100vh;
+  width: 300px;
+
+  &__user-name{
+    height: 100px;
+    display: flex;
+    align-items: center;
+     
+    .top-items{
+      height: 20px;
+      width: 260px;
+      margin: 0 20px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+
+      .top-items__name {
+        color: #ffffff;
+        font-size: 16px;
+      }
+
+      .top-items__icons {
+        line-height: center;
+        width: 60px;
+      }
+    }
+  }
+
+  &__group-list{ 
+    background-color: #2f3e51;
+    height: calc(100vh - 100px); 
+    width: 300px;
+
+     .group-comment{
+      height: 71px;
+      width: 260px;
+      margin: 0 20px;
+      display: flex;
+      justify-content:space-between;
+      color: #ffffff;
+      font-weight: bold;
+      flex-flow: column;
+      padding-top: 30px;
+
+       &__name1{
+         font-size: 15px;
+       }
+
+       &__name2{
+         font-size: 11px;
+         padding-bottom: 40px;
+         padding-top: 5px;
+       }
+    }
+  }
+}
+
+.chat-main{
+    background-color: #ffffff;
+    width: calc(100VW - 300px);
+    height: 100vh;
+    &__group-info{
+      height: 100px;
+      background-color: #ffffff;
+
+      .info-box{
+        display: flex;
+        height: 100%;
+        position: relative;
+        justify-content: space-between;
+        padding:  0 40px;
+        border-bottom: 1px solid #eeeeee;
+
+        &__title{
+
+          .group-name{
+          color: #333333;
+          font-size: 20px;
+          margin: 0 0 15px;
+          position: absolute;
+          top: 30px;
+          }
+
+          .group-message{
+          color: #999999;
+          font-size: 12px;
+          position: absolute;
+          top: 70px;
+          }
+        }
+        &__edit{
+          color: #38aef0;
+          font-size: 16px;
+          line-height: 40px;
+          padding: 0 20px;
+          margin-top: 30p;
+          position: absolute;
+          top: 28px;
+          right: 40px;
+          width: 72px;
+          border: solid 1px #38aef0;
+
+          .contents__btn{
+          text-decoration: none;
+          color: #38aef0;
+          }
+        }
+      }
+    }
+    
+    &__message-list{
+      background-color: #fafafa;
+      height: calc(100vh - 190px);
+      padding: 35px 40px;
+      .chat-comment{
+
+        &__name1{
+          color: #333333;
+          font-size: 16px;
+          margin: 0 0 12px;
+        }
+
+        &__name2{
+          color: #434A54;
+          font-size: 14px;
+          margin: 0 0 46px;
+        }
+      }
+      .chat-next{
+        &__name1{
+          color: #333333;
+          font-size: 16px;
+          margin: 0 0 12px;
+        }
+
+        &__name2{
+          color: #434A54;
+          font-size: 14px;
+          margin: 0 0 46px;
+      }
+    }
+  }
+    &__message-form{
+      background-color: #d2d2d2;
+      height: 90px;
+      display: flex;
+      justify-content:space-between;
+      align-items: flex-start;
+      padding: 20px 40px;
+      line-height: 50px;
+
+      .message-area{
+        height: 50px;
+        width: calc(100% - 189px);
+        font-size: 11px;
+        color: grey;
+        border: solid 1px #ffffff;
+        padding: 0 10px;
+        background-color: #ffffff;
+        position: relative;
+
+        .message-area2{
+          position: absolute;
+          top: 0;
+          right: 0;
+          font-size: 25px;
+          right: 10px;
+
+          input{
+            display: none;
+          }
+        }
+      }
+      
+      .message-icon{
+        background-color: #38aef0;
+        height: 50px;
+        width: 94px;
+        padding: 0 30px;
+        margin-left: 15px;
+        border: solid 1px#ffffff;
+
+        .contents__btn{
+          text-decoration: none;
+          color:#ffffff; 
+      }
+     }
+  }
+}
+
+.icon {
+  text-decoration: none;
+  padding: 2.5px ;
+  line-height: center;
+  color:#ffffff;
+  text-align:  right;
+}
