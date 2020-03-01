@@ -1,0 +1,11 @@
+.chat-comment
+  .chat-comment__name
+    .group-name1
+      =message.user.name
+    .group-time1
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .chat-comment__name2
+    - if message.content.present?
+      %p.chat-comment__name2__content
+        = message.content
+    = image_tag message.image.url, class: 'chat-comment__name2' if message.image.present?
