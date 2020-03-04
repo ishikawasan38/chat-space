@@ -41,6 +41,8 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px); 
     width: 300px;
+    overflow: scroll;
+    text-decoration: none;
 
      .group-comment{
       height: 71px;
@@ -52,10 +54,12 @@
       font-weight: bold;
       flex-flow: column;
       padding-top: 30px;
+      
 
        &__name1{
          font-size: 15px;
          color: #ffffff;
+         
        }
 
        &__name2{
@@ -63,6 +67,7 @@
          color: #ffffff;
          padding-bottom: 40px;
          padding-top: 5px;
+         
        }
     }
   }
@@ -127,6 +132,7 @@
       padding: 10px  40px 35px;
       overflow: scroll;
       
+      
       .chat-comment{
         margin-top: 25px;
 
@@ -184,13 +190,21 @@
         align-items: flex-start;
         padding: 20px 40px;
         line-height: 50px; 
+
         .contents__btn{
           text-decoration: none;
           color:#ffffff; 
-          margin: 15px 20px; 
+          // margin: 15px 20px; 
+          margin-left: 15px;
+          padding: 0 30px;
+          height: 50px;
+          width: 100px;
           background-color: #38aef0;
           border: solid 1px #ffffff; 
-          font-size: 20px;
+          font-size: 15px;
+          cursor: pointer;
+          
+
           } 
         .message-area{
           height: 50px;
@@ -223,9 +237,10 @@
         background-color: #38aef0;
         height: 50px;
         width: 94px;
-        padding: 0 30px;
-        margin-left: 15px;
+        // padding: 0 30px;
+        // margin-left: 15px;
         border: solid 1px#ffffff;
+        
 
       
       }
@@ -237,6 +252,6 @@
   text-decoration: none;
   padding: 2.5px ;
   line-height: center;
-  color:#ffffff;
+  color :#ffffff;
   text-align:  right;
 }
