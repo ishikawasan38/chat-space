@@ -3,6 +3,7 @@ $(function(){
         if ( message.content && message.image) {
           var html = 
            `<div class="message" data-message-id= ${message.id} >
+           </div>
               <div class="chat-comment">
                 <div class="chat-comment__name">
                   <div class="group-name1">
@@ -17,12 +18,13 @@ $(function(){
                     ${message.content}
                   </p>
                 <img src=${message.image} class="input-box__image" >
-                </div>
-            </div>`   
+                </div>`
+              
 
         } else if (message.content) {
           var html =
            `<div class="message" data-message-id=${message.id}> 
+           </div>
               <div class="chat-comment">
                 <div class="chat-comment__name">
                  <div class="group-name1">
@@ -36,12 +38,12 @@ $(function(){
                 <p class="chat-comment__name2__content">
                    ${message.content}
                 </p> 
-              </div> 
-           </div>` 
+              </div> `
 
         } else if (message.image) {
           var html =
           `<div class="message" data-message-id= ${message.id}> 
+           </div>
              <div class="chat-comment">
                <div class="chat-comment__name">
                  <div class="group-name1">
@@ -53,8 +55,8 @@ $(function(){
                </div>
                  <div class="chat-comment__name2">
                    <img src=${message.image} class="input-box__image"
-               </div>
-           </div>`   
+               </div>`
+              
         
       };
       return html;
@@ -76,17 +78,17 @@ $(function(){
    })
      .done(function(data){
        var html = buildHTML(data);
-       $('.chat-main__message-list').append(html);
+       $('.chat-comments').append(html);
        $('form')[0].reset(); 
-     })   
+      //  console.log($('.chat-comments')[0].scrollHeight);
+       $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
+       $('.contents__btn').prop('disabled', false);
+     })
     .fail(function(){
         alert("メッセージ送信に失敗しました");
     })
-    .always(function(){
-      $
-      ('.contens__btn').prop('disabled', false);
     });
-  })
+  
   
   var reloadMessages = function() {
     var last_message_id = $('.message:last').data("message-id");
@@ -98,12 +100,12 @@ $(function(){
     })
     .done(function(messages){
       if (messages. length !== 0){
-      var insertHTML = '';
-      $.each(messages, function(i, message){
-        insertHTML += buildHTML(message)
+        var insertHTML = '';
+        $.each(messages, function(i, message){
+          insertHTML += buildHTML(message)
       });
-      $('.chat-main__message-list').append(insertHTML);
-      $('.chat-main__message-list').animate({ scrolltop: $('.chat-main__message-list')[0].scrollHeight});
+        $('.chat-comments').append(insertHTML);
+        $('.chat-main__message-list').animate({ scrolltop: $('.chat-main__message-list')[0].scrollHeight});
      }
     })
     .fail(function() {
@@ -112,5 +114,5 @@ $(function(){
    };
   if (document.location.href.match(/\/groups\/\d+\/messages/)){
     setInterval(reloadMessages, 7000);
-  }
-});
+  };
+})
