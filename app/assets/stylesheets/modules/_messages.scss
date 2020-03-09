@@ -11,6 +11,7 @@
   background-color: #253141;
   height: 100vh;
   width: 300px;
+  text-decoration: none;
 
   &__user-name{
     height: 100px;
@@ -24,13 +25,14 @@
       text-align: center;
       display: flex;
       justify-content: space-between;
+      
 
       .top-items__name {
         color: #ffffff;
         font-size: 16px;
       }
 
-      .top-items__icons {
+      .top-items__icons1 {
         line-height: center;
         width: 60px;
       }
@@ -147,7 +149,8 @@
           }
 
           .group-time1{
-            font-size: 8px;
+            color: #999999;
+            font-size: 12px;
             padding: 0 15px;
           }
         }
@@ -199,8 +202,8 @@
           height: 50px;
           width: 100px;
           background-color: #38aef0;
-          border: solid 1px #ffffff; 
-          font-size: 15px;
+          border: solid 1px #999999; 
+          font-size: 16px;
           cursor: pointer;
           
 
@@ -215,8 +218,9 @@
           background-color: #ffffff;
           position: relative;
           .message-area1{ 
+            height: 50px;
             border: 0px none;
-            width: calc(100% - 140px);
+            width: 100%;
           }
           
         }
