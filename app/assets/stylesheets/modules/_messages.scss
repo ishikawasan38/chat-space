@@ -45,31 +45,32 @@
     width: 300px;
     overflow: scroll;
     text-decoration: none;
+    padding: 20px 20px 0;
 
      .group-comment{
-      height: 71px;
-      width: 260px;
-      margin: 0 20px;
-      display: flex;
-      justify-content:space-between;
-      color: #ffffff;
-      font-weight: bold;
-      flex-flow: column;
-      padding-top: 30px;
+      // // height: 71px;
+      // // width: 260px;
+      // margin: 0 20px;
+      // display: flex;
+      // justify-content:space-between;
+      // color: #ffffff;
+      // font-weight: bold;
+      // flex-flow: column;
+      // padding-top: 30px;
+      margin-bottom: 40px;
       
 
        &__name1{
          font-size: 15px;
          color: #ffffff;
-         
+         margin-bottom: 5px;   
        }
 
        &__name2{
          font-size: 11px;
          color: #ffffff;
-         padding-bottom: 40px;
-         padding-top: 5px;
-         
+        //  padding-bottom: 40px;
+        //  padding-top: 5px;
        }
     }
   }
@@ -255,4 +256,5 @@
   line-height: center;
   color :#ffffff;
   text-align:  right;
+
 }
