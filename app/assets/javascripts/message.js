@@ -104,9 +104,10 @@ $(function(){
         $.each(messages, function(i, message){
           insertHTML += buildHTML(message)
       });
-        $('.chat-comments').append(insertHTML);
-        $('.chat-main__message-list').animate({ scrolltop: $('.chat-main__message-list')[0].scrollHeight});
+        
      }
+     $('.chat-comments').append(insertHTML);
+        $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
